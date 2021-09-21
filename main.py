@@ -38,7 +38,7 @@ def frame_to_text_image(frame, density, size, ascii_values):
     return image
 
 
-video = cv2.VideoCapture('ToConvert/test.mp4')
+video = cv2.VideoCapture('test.mp4')
 success, video_frame = video.read()
 
 ascii_codes = {
@@ -75,7 +75,7 @@ while success:
     success, video_frame = video.read()
     success_count += 1
 
-converted_video = cv2.VideoWriter('Converted/converted_video.avi', 0, fps, (video_width, video_height))
+converted_video = cv2.VideoWriter('converted_video.avi', 0, fps, (video_width, video_height))
 
 for list_frame in frames:
     converted_video.write(list_frame)
