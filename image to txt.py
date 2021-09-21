@@ -31,7 +31,7 @@ ascii_codes = {
     1.0: '@',
 }
 
-video = cv2.VideoCapture('ToConvert/This is a Bucket Long.mp4')
+video = cv2.VideoCapture('This is a Bucket Long.mp4')
 success, video_frame = video.read()
 
 video_width = int(video.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -44,7 +44,7 @@ fps = video.get(cv2.CAP_PROP_FPS) / frame_skip
 success_count = 1
 conversion_count = 1
 
-file = open('Converted\\This is a Bucket Long.txt', 'x')
+file = open('This is a Bucket Long.txt', 'x')
 
 while success:
     if success_count % frame_skip == 0:
